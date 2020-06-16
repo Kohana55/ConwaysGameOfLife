@@ -35,7 +35,7 @@ namespace ConwaysGoL
                 for (int j =0; j<m_gol.Y; j++)
                 {
                     if (m_gol.CurrentGeneration[i, j] == 1)
-                        sceneBuffer += ".";
+                        sceneBuffer += "*";
                     else
                         sceneBuffer += " ";
                 }
