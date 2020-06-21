@@ -1,11 +1,10 @@
 ﻿using System.Threading;
-using System.Threading.Tasks;
 
 namespace ConwaysGoL
 {
     class Program
     {
-        static async Task Main()
+        static void Main(string[] args)
         {
             GameOfLife gameOfLife = new GameOfLife(40, 90);
             GoL_GraphicsManager graphicsManager = new GoL_GraphicsManager(gameOfLife);
@@ -14,7 +13,7 @@ namespace ConwaysGoL
             {
                 graphicsManager.Draw();
                 gameOfLife.SpawnNextGeneration();
-                await Task.Delay(125);
+                Thread.Sleep(125);
             }
         }
     }
